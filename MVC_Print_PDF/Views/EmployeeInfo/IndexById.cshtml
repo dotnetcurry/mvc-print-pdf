@@ -1,0 +1,75 @@
+﻿@model MVC_Print_PDF.Models.EmployeeInfo
+
+@{
+    ViewBag.Title = "IndexById";
+}
+
+
+<div>
+    <h2>Salary Details of : @Model.EmpName</h2>
+    <table class="table table-bordered table-condensed table-striped">
+        <tr>
+            <td>Department Name :</td>
+            <td>@Model.DeptName</td>
+        </tr>
+        <tr>
+            <td>Designation :</td>
+            <td>@Model.Designation</td>
+        </tr>
+    </table>
+    <table class="table table-bordered table-condensed table-striped">
+        <tr>
+            <td>
+                <table class="table table-bordered table-condensed table-striped">
+                    <tr>
+                        <td colspan="2">Income Details</td>
+                    </tr>
+                    <tr>
+                        <td>Salary</td>
+                        <td>@Model.Salary</td>
+                    </tr>
+                    <tr>
+                        <td>HRA</td>
+                        <td>@Model.HRA</td>
+                    </tr>
+                    <tr>
+                        <td>TA</td>
+                        <td>@Model.TA</td>
+                    </tr>
+                    <tr>
+                        <td>DA</td>
+                        <td>@Model.DA</td>
+                    </tr>
+                    <tr>
+                        <td>Gorss Salary</td>
+                        <td>@Model.GrossSalary</td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table class="table table-bordered table-condensed table-striped">
+                    <tr>
+                        <td colspan="2">
+                            Deductions
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>TDS</td>
+                        <td>@Model.TDS</td>
+                    </tr>
+
+                    <tr>
+                        <td>Net Salary</td>
+                        <td>
+                            @Model.NetSalary
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+<p>
+       @Html.ActionLink("Back to List", "Index")
+</p>
+</div>
